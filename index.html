@@ -63,7 +63,7 @@
 
 <main>
 
-  <section class="hero full-hero">
+  <section class="reveal hero full-hero">
     <div class="container">
       <div class="full-hero-card">
         <img src="sl1.jpg" alt="TEİ Forum 2026">
@@ -86,12 +86,12 @@
   </section>
 
 
-  <section class="section">
+  <section class="reveal section">
     <div class="container">
       <div class="section-head">
         <div><span class="kicker">Necə İşləyir</span><h2>3 addımda şəbəkəyə qoşul</h2></div>
       </div>
-      <div class="steps">
+      <div class="stagger steps">
         <div class="step"><div class="step-num">01</div><h3>Paketi seç</h3><p>Şirkətinin ehtiyaclarına uyğun Silver, Gold və ya Platinum paketini seç.</p></div>
         <div class="step"><div class="step-num">02</div><h3>İcmaya qoşul</h3><p>Profil yarat, üzvlərə bax, B2B görüşlərə qeydiyyatdan keç.</p></div>
         <div class="step"><div class="step-num">03</div><h3>Böyü & qazan</h3><p>Tədbirlərə qatıl, tərəfdaşlar tap, biznesini genişləndir.</p></div>
@@ -99,111 +99,136 @@
     </div>
   </section>
 
-  <section class="section" id="plans">
+  <section class="section membership-selector" id="plans">
     <div class="container">
       <div class="section-head">
-        <div><span class="kicker">Üzvlük Paketləri</span><h2>Biznesinə uyğun planı seç</h2></div>
+        <div>
+          <span class="kicker">Üzvlük Paketləri</span>
+          <h2>Biznesiniz üçün uyğun üzvlüyü seçin</h2>
+        </div>
+        <p>Paketi seçin, qiymət və tam xidmət siyahısı aşağıdakı premium paneldə görünsün.</p>
       </div>
-      <div class="tabs">
-        <button class="tab active" data-tab="local">Üzvlük</button>
-        <button class="tab" data-tab="international">Beynəlxalq Üzvlük</button>
+
+      <div class="selector-tabs">
+        <button class="selector-tab active" type="button" data-selector-tab="local">Üzvlük</button>
+        <button class="selector-tab" type="button" data-selector-tab="international">Beynəlxalq Üzvlük</button>
       </div>
-      <div class="plan-panel active" data-panel="local">
-        <div class="plans">
+
+      <div class="selector-panel active" data-selector-panel="local">
+        <div class="selector-grid">
           
-    <article class="plan ">
-      
-      <div class="plan-label">Giriş Səviyyəsi</div>
-      <div class="plan-name">Silver</div>
-      <ul><li>Founderclub.az saytında şirkət profili</li><li>Sosial şəbəkələrdə paylaşım</li><li>B2B görüşlərə dəvət</li><li>Aylıq networking tədbirləri</li><li>Founder Club təlimlərə dəvət</li></ul>
-      <button class="btn btn-light details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">1800 AZN <small>/ il</small></div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>Web sayt, əlaqə, sosial şəbəkə məlumatlarının paylaşımı</li><li>Facebook, Instagram, LinkedIn, Telegram paylaşımı</li><li>B2B tanışlıq görüşlərinə dəvət</li><li>Aylıq network görüşləri</li><li>Maliyyə, Vergi, Hüquq, HR, Marketinq təlimləri</li><li>Məsləhət xidmətlərindən istifadə</li><li>Sosial fəaliyyətlərə dəvət</li><li>Rəsmi konfrans və tədbirlərə dəvət</li><li>Klub platformalarında elan yerləşdirmə</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-silver" 
+            data-plan-key="local-silver"
+            data-plan-name="Silver"
+            data-plan-tag="Entry Network"
+            data-plan-price="1800 AZN"
+            data-plan-subtitle="Biznes şəbəkəsinə giriş üçün təmiz və funksional paket."
+            data-plan-details="Founder Club sosial platformalarında partnyorluq haqqında paylaşım.|Founderclub.az saytında şirkət məlumatlarının paylaşımı.|B2B görüşlərə dəvət — 1 dəfə.|Founder Club ekskursiyalarında iştirak imkanı.|Founder Club təlimlərinə dəvət — 1 dəfə.|Maliyyə, marketinq, hüquqi və gömrük sahələri üzrə məsləhət xidmətləri.|Sosial fəaliyyətlərə və rəsmi tədbirlərə dəvət.|Networking night və B2B tədbirlərdə iştirak imkanı.|Partnyorlarla əlaqəyə dəstək.">
+            <div class="selector-top">
+              <span>Entry Network</span>
+              <h3>Silver</h3>
+            </div>
+            <ul><li>Şirkət tanıtımı</li><li>1 B2B görüş</li><li>1 təlim dəvəti</li><li>Məsləhət xidmətləri</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
-    <article class="plan featured">
-      <span class="badge">Ən Populyar</span>
-      <div class="plan-label"></div>
-      <div class="plan-name">Gold</div>
-      <ul><li>Silver-in bütün xidmətləri</li><li>Ofis ekskursiyasının təşkili</li><li>Səfirliklərlə görüşlər (2 dəfə)</li><li>Şirkətlər arası ekskursiya</li><li>Xarici ölkə əlaqələri</li><li>Video müsahibə (sosial mediada yayım)</li></ul>
-      <button class="btn btn-copper details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">2800 AZN <small>/ il</small></div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>Silver-in bütün xidmətləri daxildir</li><li>Ofis ziyarəti ekskursiyasının təşkili</li><li>Səfirliklərlə görüşlər (2 dəfə/il)</li><li>Şirkətlər arası aylıq ekskursiya</li><li>Xarici ölkə əlaqələri və ikili görüşlər</li><li>Video müsahibə (FB, LinkedIn, IG, YouTube)</li><li>Instagram hekayə reklamı</li><li>Networking Night-a dəvət + nominasiya hədiyyələri</li><li>Visa dəstəyi (xidmət haqqı endirimi)</li><li>Xarici sərgilər (25% endirim)</li><li>Partnyor əlaqə məlumatlarına giriş</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-gold" 
+            data-plan-key="local-gold"
+            data-plan-name="Gold"
+            data-plan-tag="Ən Populyar"
+            data-plan-price="2800 AZN"
+            data-plan-subtitle="Daha aktiv networking və şirkət görünürlüğü üçün balanslı seçim."
+            data-plan-details="Silver paketində olan əsas xidmətlər.|B2B görüşlərə dəvət — 2 dəfə.|Şirkətinizin tanıdılması üçün ofis ziyarəti / ekskursiya təşkili.|Founder Club təlimlərinə dəvət — 2 dəfə.|Şirkətlər arasında ikili görüşlərin təşkili — 2 dəfə.|Xarici ölkələrdə əlaqələrin qurulması.|Instagram hekayə bölümündə reklam xarakterli məlumat paylaşımı.|Founder Club tədbirlərində Rollap reklamı.|Xarici ölkə sərgiləri — 25% xidmət haqqı endirimi.|Visa dəstəyi — 25% xidmət haqqı endirimi.">
+            <div class="selector-top">
+              <span>Ən Populyar</span>
+              <h3>Gold</h3>
+            </div>
+            <ul><li>Silver imkanları</li><li>2 B2B görüş</li><li>Ofis ziyarəti</li><li>25% endirim</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
-    <article class="plan ">
-      
-      <div class="plan-label">Premium</div>
-      <div class="plan-name">Platinum</div>
-      <ul><li>Gold-un bütün xidmətləri</li><li>Səfirliklərlə görüşlər (3 dəfə)</li><li>Brendvold-da sponsor logo (ölkə daxili)</li><li>Brendvold-da sponsor logo (xarici)</li><li>Xarici B2B görüşlərə VIP giriş</li><li>Visa dəstəyi (50% endirim)</li></ul>
-      <button class="btn btn-light details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">5000 AZN <small>/ il</small></div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>Gold-un bütün xidmətləri daxildir</li><li>Səfirliklərlə görüşlər (3 dəfə/il)</li><li>Ölkə daxili tədbirlərdə brendvold logo</li><li>Xarici tədbirlərdə brendvold sponsor logo</li><li>Xarici iş adamları ilə B2B görüşlərə VIP giriş</li><li>Rollap reklamı tədbirlərdə</li><li>Visa dəstəyi (50% endirim)</li><li>Xarici sərgilər (50% endirim)</li><li>Tam partnyor şəbəkəsinə giriş</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-platinum" 
+            data-plan-key="local-platinum"
+            data-plan-name="Platinium"
+            data-plan-tag="Executive"
+            data-plan-price="5000 AZN"
+            data-plan-subtitle="Daha yüksək status, media görünürlüğü və premium imkanlar."
+            data-plan-details="Gold paketində olan əsas xidmətlər.|B2B görüşlərə dəvət — 3 dəfə.|Səfirliklərlə görüşlərdə iştirak imkanı.|Founder Club təlimlərinə dəvət — 3 dəfə.|Video müsahibə — Facebook, LinkedIn, Instagram və Youtube yayımlanır.|Ölkə daxilində və xaricində brendwall sponsor logo imkanları.|Xarici iş adamları ilə B2B görüşlərdə sponsor logo.|Founder Club tədbirlərində Rollap reklamı.|Xarici ölkə sərgiləri — 50% xidmət haqqı endirimi.|Visa dəstəyi — 50% xidmət haqqı endirimi.">
+            <div class="selector-top">
+              <span>Executive</span>
+              <h3>Platinium</h3>
+            </div>
+            <ul><li>Gold imkanları</li><li>3 B2B görüş</li><li>Səfirlik görüşləri</li><li>50% endirim</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
         </div>
+        <div class="selector-detail selector-empty" data-detail-for="local"></div>
       </div>
-      <div class="plan-panel" data-panel="international">
-        <div class="international-intro">
-          <h3>Founder Club International — “Trade & Partnership Mission”</h3>
-          <p>İxrac etmək istəyən şirkətlər, xarici partnyor axtaran istehsalçılar, distribütor tapmaq istəyənlər üçün. Türkiyə, Orta Asiya, Pakistan, Hindistan, İndoneziya, UAE, Rusiya, Gürcüstan, Avropa və digər bazarlara giriş.</p>
+
+      <div class="selector-panel" data-selector-panel="international">
+        <div class="selector-intro">
+          <span>Founder Club International</span>
+          <h3>Trade & Partnership Mission</h3>
+          <p>İxrac etmək istəyən şirkətlər, xarici partnyor axtaran istehsalçılar və distribütor tapmaq istəyənlər üçün.</p>
+          <strong>Açar məqam: “Gəzinti” yox, biznes nəticəsi satılır.</strong>
         </div>
-        <div class="plans">
+        <div class="selector-grid selector-grid-international">
           
-    <article class="plan ">
-      
-      <div class="plan-label">Entry Market Access</div>
-      <div class="plan-name">Silver</div>
-      <ul><li>1 ölkə üzrə bazar briefing (onlayn)</li><li>3–5 hədəf şirkət profili</li><li>2 B2B onlayn görüş</li></ul>
-      <button class="btn btn-light details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">3000 USD</div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>1 seçilmiş ölkə üzrə bazar analizi və briefing</li><li>3–5 hədəf şirkətin profili və əlaqə məlumatları</li><li>2 B2B onlayn görüş təşkili və koordinasiyası</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-silver" 
+            data-plan-key="intl-silver"
+            data-plan-name="Silver"
+            data-plan-tag="Entry Market Access"
+            data-plan-price="3000 $"
+            data-plan-subtitle="Yeni bazara giriş üçün ilkin analiz və B2B tanışlıq."
+            data-plan-details="1 ölkə üzrə bazar briefing — onlayn.|3–5 hədəf şirkət profili.|2 B2B onlayn görüş.">
+            <div class="selector-top">
+              <span>Entry Market Access</span>
+              <h3>Silver</h3>
+            </div>
+            <ul><li>1 ölkə briefing</li><li>3–5 şirkət profili</li><li>2 onlayn B2B</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
-    <article class="plan featured">
-      
-      <div class="plan-label">Active Trade Mission</div>
-      <div class="plan-name">Gold</div>
-      <ul><li>Seçilmiş 1 ölkəyə biznes missiya</li><li>5–7 real B2B görüş (öncədən planlı)</li><li>Yerli biznes assosiasiya ilə masa</li><li>Tərcümə & koordinasiya</li><li>Şirkət pitch deck review</li></ul>
-      <button class="btn btn-copper details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">5000 USD</div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>1 seçilmiş ölkəyə tam biznes missiya</li><li>5–7 öncədən planlaşdırılmış real B2B görüş</li><li>Yerli biznes assosiasiya ilə masa danışıqları</li><li>Peşəkar tərcümə və koordinasiya xidməti</li><li>Şirkətin pitch deck-inin review edilməsi</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-gold" 
+            data-plan-key="intl-gold"
+            data-plan-name="Gold"
+            data-plan-tag="Trade Mission"
+            data-plan-price="5000 $"
+            data-plan-subtitle="Real biznes missiya və planlanmış görüşlər üçün premium paket."
+            data-plan-details="Seçilmiş 1 ölkəyə biznes missiya.|5–7 real B2B görüş — öncədən planlı.|Yerli biznes assosiasiya ilə masa.|Tərcümə və koordinasiya.|Şirkətin təqdimatı — pitch deck review.">
+            <div class="selector-top">
+              <span>Trade Mission</span>
+              <h3>Gold</h3>
+            </div>
+            <ul><li>1 ölkə missiya</li><li>5–7 real B2B</li><li>Tərcümə &amp; koordinasiya</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
-    <article class="plan ">
-      
-      <div class="plan-label">Strategic Partnership</div>
-      <div class="plan-name">Platinum</div>
-      <ul><li>2 ölkə Biznes Misiya</li><li>1-ə-1 strateji tanışdırma</li><li>Distributor / investor matching</li><li>Hüquqi & kommersiya çərçivəsi</li><li>Ruslan bəyin şəxsi iştirakı</li><li>Qapalı “decision-makers” masası</li></ul>
-      <button class="btn btn-light details-toggle" type="button">Daha Ətraflı ↓</button>
-      <div class="details">
-        <div class="price">12000 USD</div>
-        <h4>Bütün xidmətlər</h4>
-        <ul><li>2 ölkə üzrə tam biznes missiya</li><li>1-ə-1 fərdi strateji tanışdırma sessiyası</li><li>Distributor və investor matching xidməti</li><li>Hüquqi & kommersiya ilkin çərçivənin hazırlanması</li><li>Ruslan bəyin şəxsi iştirakı və tanışdırması</li><li>Qapalı “decision-makers” masa görüşü</li></ul>
-      </div>
-    </article>
+          <article class="selector-card selector-platinum" 
+            data-plan-key="intl-platinum"
+            data-plan-name="Platinium"
+            data-plan-tag="Strategic Partnership"
+            data-plan-price="12000 $"
+            data-plan-subtitle="Strateji tərəfdaşlıq, investor/distributor matching və decision-maker girişləri."
+            data-plan-details="2 ölkə Biznes Misiya.|1-ə-1 strateji tanışdırma.|Distributor / investor matching.|Hüquqi və kommersiya ilkin çərçivə.|Ruslan bəyin şəxsi iştirakı və tanışdırması.|Qapalı “decision-makers” masası.">
+            <div class="selector-top">
+              <span>Strategic Partnership</span>
+              <h3>Platinium</h3>
+            </div>
+            <ul><li>2 ölkə missiya</li><li>Investor matching</li><li>Decision-makers masası</li></ul>
+            <button class="selector-btn" type="button">Paketi seç →</button>
+          </article>
     
         </div>
+        <div class="selector-detail selector-detail-dark selector-empty" data-detail-for="international"></div>
       </div>
     </div>
   </section>
 
-  <section class="section">
+
+
+  <section class="reveal section">
     <div class="container">
       <div class="section-head">
         <div><span class="kicker">Üzvlərimiz Deyir</span><h2>Əsl nəticələr</h2></div>
@@ -213,8 +238,57 @@
       </div>
     </div>
   </section>
+  <section class="reveal section faq-section" id="faq">
+    <div class="container faq-container">
+      <span class="faq-kicker">SUAL-CAVAB</span>
+      <h2>Bizə ən çox verilən<br>suallar və cavabları</h2>
 
-  <section class="section" id="contact">
+      <div class="stagger faq-list">
+        <div class="faq-item active">
+          <button class="faq-question" type="button">
+            <span class="faq-icon"></span>
+            <span>Nə üçün Founder Clubı seçməliyik?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sahibkarların çox olmasını və həyatlarının xoşbəxt olmasını istəyirik. Bunun üçün onların inkişafı və böyüməsi üçün komandalar qururuq.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span class="faq-icon"></span>
+            <span>Founder Club ilə birlikdə əməkdaşlıq qursaq əldə edəcəyimiz üstünlüklər nələrdir?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Güvən və səmimiyyətin olduğu mühitdə təcrübə mübadiləsi, enerji və bir-birini dəstəkləməyə hazır olan həmfikir sahibkarların olması sizin üçün əhəmiyyətli dərəcədə önəmlidir.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span class="faq-icon"></span>
+            <span>Şirkətimiz üçün ən uyğun paket hansıdır?</span>
+          </button>
+          <div class="faq-answer">
+            <p>3 əsas paketimiz mövcuddur. Silver, Gold və Platinium. Bu paketlərin xüsusiyyətləri bir birindən fərqlənir. Partnyor ol səhifəmizdə geniş bir cədvəl mövcuddur.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span class="faq-icon"></span>
+            <span>Fərdi sahibkarlarda kluba üzv ola bilərmi?</span>
+          </button>
+          <div class="faq-answer">
+            <p>Üzv olmaq üçün MMC olmalıdır. Ən azı 3 rəsmi əməkdaşı olmalıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="reveal section" id="contact">
     <div class="container">
       <div class="contact-box">
         <div>
