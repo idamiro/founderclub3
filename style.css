@@ -2560,3 +2560,73 @@ img{
 .selector-detail:not(.is-visible){
   display:none !important;
 }
+
+
+/* FIX: Founder Club Məşvərət heyəti / Əsl nəticələr cards */
+.testimonials{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:26px !important;
+  align-items:start !important;
+}
+.testimonial{
+  position:relative !important;
+  min-height:430px !important;
+  padding:72px 28px 28px !important;
+  border-radius:18px !important;
+  background:#fff !important;
+  border:0 !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+.testimonial .person{display:none !important;}
+.quote-mark{
+  position:absolute !important;
+  top:18px !important;
+  left:24px !important;
+  font-size:82px !important;
+  line-height:.7 !important;
+  font-weight:900 !important;
+  color:#29b7a5 !important;
+  font-family:Arial,sans-serif !important;
+}
+.testimonial-photo{
+  position:absolute !important;
+  top:0 !important;
+  right:0 !important;
+  width:74px !important;
+  height:74px !important;
+  border-radius:50% !important;
+  object-fit:cover !important;
+  transform:translate(18%,-18%) !important;
+  border:0 !important;
+}
+.testimonial h3{
+  margin:0 0 6px !important;
+  color:#080b33 !important;
+  font-size:18px !important;
+  line-height:1.2 !important;
+  font-weight:800 !important;
+}
+.testimonial span{
+  display:block !important;
+  margin-bottom:18px !important;
+  color:#6b6b75 !important;
+  font-size:14px !important;
+  font-weight:500 !important;
+}
+.testimonial p{
+  color:#63636a !important;
+  font-size:16px !important;
+  line-height:1.65 !important;
+  margin:0 0 18px !important;
+}
+.testimonial .stars{
+  color:#29b7a5 !important;
+  font-size:16px !important;
+  letter-spacing:2px !important;
+  margin-top:auto !important;
+}
+@media(max-width:1100px){.testimonials{grid-template-columns:repeat(3,minmax(0,1fr)) !important;}}
+@media(max-width:800px){.testimonials{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
+@media(max-width:560px){.testimonials{grid-template-columns:1fr !important;}.testimonial-photo{right:14px !important;transform:translate(0,-18%) !important;}}
