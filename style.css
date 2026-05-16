@@ -2630,3 +2630,131 @@ img{
 @media(max-width:1100px){.testimonials{grid-template-columns:repeat(3,minmax(0,1fr)) !important;}}
 @media(max-width:800px){.testimonials{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}
 @media(max-width:560px){.testimonials{grid-template-columns:1fr !important;}.testimonial-photo{right:14px !important;transform:translate(0,-18%) !important;}}
+
+
+/* FINAL USER FIXES: hero, advisory carousel, FAQ colors, immediate events */
+.full-hero-card img{
+  filter:brightness(.88) contrast(1.04) !important;
+}
+.full-hero-card::after{
+  background:
+    linear-gradient(90deg,rgba(7,16,31,.55) 0%,rgba(7,16,31,.24) 46%,rgba(7,16,31,.05) 100%),
+    linear-gradient(180deg,rgba(7,16,31,.04) 0%,rgba(7,16,31,.38) 100%) !important;
+}
+.full-hero-overlay{max-width:500px !important;}
+.full-hero-overlay h1{
+  font-size:clamp(32px,3.6vw,54px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-.045em !important;
+}
+.full-hero-overlay p{font-size:16px !important;max-width:480px !important;}
+
+.section-head{align-items:center !important;}
+.all-testimonials-btn{
+  justify-self:end;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:0 22px;
+  border-radius:999px;
+  border:1px solid rgba(184,121,61,.42);
+  color:var(--copper);
+  background:rgba(255,255,255,.58);
+  font-weight:900;
+  font-size:14px;
+  box-shadow:0 12px 28px rgba(9,17,31,.045);
+}
+.all-testimonials-btn:hover{background:var(--copper);color:#211306;}
+.testimonial-carousel-wrap{
+  position:relative;
+  margin-top:22px;
+}
+.testimonials{
+  display:flex !important;
+  grid-template-columns:none !important;
+  gap:26px !important;
+  align-items:stretch !important;
+  overflow-x:auto !important;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding:32px 10px 18px !important;
+  scrollbar-width:none;
+}
+.testimonials::-webkit-scrollbar{display:none;}
+.testimonial{
+  flex:0 0 calc((100% - 78px) / 4) !important;
+  scroll-snap-align:start;
+  min-height:430px !important;
+  background:#fffaf3 !important;
+  border:1px solid rgba(184,121,61,.14) !important;
+  box-shadow:0 18px 50px rgba(9,17,31,.055) !important;
+}
+.quote-mark{color:var(--copper) !important;}
+.testimonial h3{color:var(--navy) !important;}
+.testimonial span{color:#7e705f !important;}
+.testimonial p{color:#5f6670 !important;}
+.testimonial .stars{color:var(--copper) !important;}
+.testimonial-arrow{
+  position:absolute;
+  top:50%;
+  z-index:5;
+  transform:translateY(-50%);
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  border:1px solid rgba(184,121,61,.28);
+  background:#fffaf3;
+  color:var(--navy);
+  font-size:34px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 16px 40px rgba(9,17,31,.14);
+}
+.testimonial-prev{left:-18px;}
+.testimonial-next{right:-18px;}
+.testimonial-arrow:hover{background:var(--navy);color:var(--ivory);}
+
+.faq-section{
+  background:
+    radial-gradient(circle at 14% 16%, rgba(184,121,61,.12), transparent 27rem),
+    linear-gradient(180deg,rgba(251,247,239,.98),rgba(247,241,232,.98)) !important;
+}
+.faq-kicker{
+  background:rgba(184,121,61,.13) !important;
+  color:var(--copper) !important;
+}
+.faq-item{
+  background:#fffaf3 !important;
+  border-color:rgba(184,121,61,.16) !important;
+}
+.faq-icon{background:var(--navy) !important;}
+.faq-item.active .faq-icon{background:var(--copper) !important;}
+.faq-item.active .faq-question{color:var(--copper) !important;}
+
+/* Show events/trainings immediately instead of waiting for scroll animation */
+.reveal,
+.reveal.in-view,
+.stagger,
+.stagger.in-view,
+.events-grid,
+.events-grid.in-view,
+.training-grid,
+.training-grid.in-view{
+  opacity:1 !important;
+  transform:none !important;
+  visibility:visible !important;
+}
+.reveal > *,
+.stagger > *,
+.events-grid > *,
+.training-grid > *{
+  opacity:1 !important;
+  transform:none !important;
+  visibility:visible !important;
+  transition:none !important;
+}
+
+@media(max-width:1100px){.testimonial{flex-basis:calc((100% - 52px) / 3) !important;}}
+@media(max-width:800px){.testimonial{flex-basis:calc((100% - 26px) / 2) !important;}.testimonial-prev{left:2px}.testimonial-next{right:2px}}
+@media(max-width:560px){.testimonial{flex-basis:100% !important}.all-testimonials-btn{display:none}.full-hero-overlay h1{font-size:34px !important;}}

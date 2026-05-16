@@ -230,3 +230,20 @@ document.querySelectorAll(".faq-question").forEach((button) => {
   // Important: no automatic default selection.
   panels.forEach(clearPanel);
 })();
+
+
+// Advisory board horizontal carousel arrows
+(() => {
+  const carousel = document.querySelector('#advisoryCarousel');
+  if (!carousel) return;
+  const wrap = carousel.closest('.testimonial-carousel-wrap');
+  const prev = wrap?.querySelector('.testimonial-prev');
+  const next = wrap?.querySelector('.testimonial-next');
+  const move = (dir) => {
+    const card = carousel.querySelector('.testimonial');
+    const amount = card ? card.getBoundingClientRect().width + 26 : carousel.clientWidth * 0.8;
+    carousel.scrollBy({ left: dir * amount, behavior: 'smooth' });
+  };
+  prev?.addEventListener('click', () => move(-1));
+  next?.addEventListener('click', () => move(1));
+})();
