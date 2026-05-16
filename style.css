@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap');
+
 :root{
   --ink:#09111f;
   --navy:#0f1f35;
@@ -249,8 +251,6 @@ textarea{min-height:130px;resize:vertical}
 }
 
 /* ================= FINAL FIX PACKAGE ================= */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap');
-
 body, input, textarea, select, button, a, p, li, span, strong,
 h1,h2,h3,h4,.plan-name,.price,.year{
   font-family:"Noto Sans","Inter",Arial,sans-serif !important;
