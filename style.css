@@ -2780,3 +2780,26 @@ img{
 .embassy-card:hover .embassy-photo-wrap img{transform:scale(1.035)}
 @media(max-width:980px){.embassy-grid{grid-template-columns:repeat(2,1fr)}.embassy-card{min-height:390px}}
 @media(max-width:640px){.embassy-hero{padding-top:96px}.embassy-grid{grid-template-columns:1fr;gap:20px}.embassy-card{min-height:auto;padding:20px}.embassy-card h3{font-size:18px}.embassy-photo-wrap{aspect-ratio:1.35/1}}
+
+
+/* FINAL: Embassy page in event-card style, no clickable arrows/details */
+.embassy-section .events-grid{opacity:1!important;transform:none!important;visibility:visible!important;}
+.embassy-grid.events-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;}
+.embassy-card.event-like-card{padding:0;min-height:100%;background:#fff;border-radius:28px;overflow:hidden;border:1px solid rgba(9,17,31,.10);box-shadow:0 18px 55px rgba(9,17,31,.055);display:flex;flex-direction:column;}
+.embassy-card.event-like-card:hover{transform:translateY(-6px);box-shadow:0 24px 70px rgba(9,17,31,.11);border-color:rgba(184,121,61,.26);}
+.embassy-card.event-like-card .embassy-photo-wrap{order:0;margin:0;border-radius:0;aspect-ratio:1.55/1;width:100%;}
+.embassy-card.event-like-card .embassy-card-body{padding:24px 24px 28px;display:flex;flex-direction:column;gap:0;}
+.embassy-card.event-like-card h3{font-size:21px;line-height:1.28;letter-spacing:-.035em;margin:0;color:var(--ink);}
+.embassy-card.event-like-card .event-tag{margin-bottom:14px;}
+.embassy-card.event-like-card .embassy-icon{display:none!important;}
+@media(max-width:1040px){.embassy-grid.events-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:680px){.embassy-grid.events-grid{grid-template-columns:1fr}.embassy-card.event-like-card .embassy-photo-wrap{aspect-ratio:1.35/1}.embassy-card.event-like-card h3{font-size:19px}}
+
+/* TEI Forum detail page */
+.tei-detail-section{padding-top:105px;}
+.tei-detail-copy .event-detail-body h2{font-size:25px;line-height:1.25;margin:30px 0 14px;color:var(--ink);letter-spacing:-.035em;}
+.tei-detail-copy .event-detail-body ul{margin:0 0 18px 18px;padding:0;color:#303946;line-height:1.85;}
+.tei-detail-copy .event-detail-body li{margin-bottom:8px;}
+.tei-detail-gallery img:first-child{border-radius:26px;}
+@media(max-width:1040px){.tei-detail-section{padding-top:86px;}.tei-detail-gallery{grid-template-columns:1fr 1fr}.tei-detail-gallery img:first-child{grid-column:1/-1}}
+@media(max-width:680px){.tei-detail-gallery{grid-template-columns:1fr}.tei-detail-copy h1{font-size:36px}}

@@ -247,3 +247,26 @@ document.querySelectorAll(".faq-question").forEach((button) => {
   prev?.addEventListener('click', () => move(-1));
   next?.addEventListener('click', () => move(1));
 })();
+
+
+// Global fix: make Səfirliklərlə Görüşlər reachable from header/footer on every page.
+(() => {
+  const targetText = 'Səfirliklərlə Görüşlər';
+  document.querySelectorAll('a').forEach((a) => {
+    if ((a.textContent || '').trim() === targetText) {
+      a.setAttribute('href', 'sefirlikler.html');
+    }
+  });
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    if ((node.nodeValue || '').trim() === targetText && node.parentElement?.tagName !== 'A') nodes.push(node);
+  }
+  nodes.forEach((node) => {
+    const a = document.createElement('a');
+    a.href = 'sefirlikler.html';
+    a.textContent = targetText;
+    node.parentNode.replaceChild(a, node);
+  });
+})();
