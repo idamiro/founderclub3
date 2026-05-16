@@ -2803,3 +2803,59 @@ img{
 .tei-detail-gallery img:first-child{border-radius:26px;}
 @media(max-width:1040px){.tei-detail-section{padding-top:86px;}.tei-detail-gallery{grid-template-columns:1fr 1fr}.tei-detail-gallery img:first-child{grid-column:1/-1}}
 @media(max-width:680px){.tei-detail-gallery{grid-template-columns:1fr}.tei-detail-copy h1{font-size:36px}}
+
+/* FIX: Səfirliklərlə Görüşlər uses the same card layout as Tədbirlər */
+.sefirlik-section .events-grid,
+.sefirlik-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:30px!important;
+  opacity:1!important;
+  transform:none!important;
+  visibility:visible!important;
+}
+.sefirlik-card{
+  padding:0!important;
+  background:#fff!important;
+  border:1px solid rgba(9,17,31,.10)!important;
+  border-radius:28px!important;
+  overflow:hidden!important;
+  box-shadow:0 18px 55px rgba(9,17,31,.055)!important;
+  display:flex!important;
+  flex-direction:column!important;
+  min-height:100%!important;
+}
+.sefirlik-card .event-card-image{
+  display:block!important;
+  height:270px!important;
+  overflow:hidden!important;
+  background:#eee8dd!important;
+  border-radius:0!important;
+  margin:0!important;
+  order:0!important;
+}
+.sefirlik-card .event-card-image img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  display:block!important;
+}
+.sefirlik-card .event-card-body{
+  flex:1!important;
+  padding:26px!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+.sefirlik-card h3{
+  font-size:22px!important;
+  line-height:1.25!important;
+  letter-spacing:-.035em!important;
+  margin:0!important;
+  color:var(--ink)!important;
+  font-weight:800!important;
+}
+.sefirlik-card .event-tag{
+  margin-bottom:18px!important;
+}
+@media(max-width:1040px){.sefirlik-section .events-grid,.sefirlik-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
+@media(max-width:680px){.sefirlik-section .events-grid,.sefirlik-grid{grid-template-columns:1fr!important;}.sefirlik-card .event-card-image{height:245px!important;}.sefirlik-card h3{font-size:20px!important;}}
