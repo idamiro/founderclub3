@@ -52,45 +52,547 @@
 </div>
 </header>
 <main>
-  <section class="page-hero honorary-hero">
+  <section class="page-hero honorary-hero partners-page-hero">
     <div class="container">
       <span class="eyebrow">FOUNDER CLUB AZ</span>
-      <h1>F&#601;xri Partnyorlar</h1>
-      <p>Founder Club-un f&#601;xri partnyorlar&#305; v&#601; d&#601;y&#601;rli biznes t&#601;r&#601;fda&#351;lar&#305;.</p>
+      <h1>Partnyorlar</h1>
+      <p>Founder Club-un biznes t&#601;r&#601;fda&#351;lar&#305; v&#601; partnyor &#351;irk&#601;tl&#601;ri. Kateqoriyan&#305; se&#231;in, uy&#287;un partnyorlar a&#351;a&#287;&#305;da g&#246;r&#252;ns&#252;n.</p>
     </div>
   </section>
 
-  <section class="honorary-section">
+  <section class="partners-section">
     <div class="container">
-      <div class="honorary-grid">
-        <article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-ozel-art-coffee.png" alt="Ozel Art & Coffee"></div>
-  <h3>Ozel Art & Coffee</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-khan-grand-projects.png" alt="Khan Grand Projects"></div>
-  <h3>Khan Grand Projects</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-solar-azerbaijan.png" alt="Solar Azerbaijan"></div>
-  <h3>Solar Azerbaijan</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-digiboom.png" alt="DigiBoom"></div>
-  <h3>DigiBoom</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-genc-media.png" alt="Genc Media"></div>
-  <h3>Genc Media</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-best-energy-group.png" alt="Best Energy Group"></div>
-  <h3>Best Energy Group</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-kitchen-plus.png" alt="Kitchen Plus"></div>
-  <h3>Kitchen Plus</h3>
-</article><article class="honorary-partner-card">
-  <div class="honorary-logo-box"><img src="fexri-caspian-capital-group.png" alt="Caspian Capital Group"></div>
-  <h3>Caspian Capital Group</h3>
+      <div class="partner-filter-wrap" aria-label="Partnyor kateqoriyalar&#305;">
+        <button class="partner-filter-btn is-active" type="button" data-filter="Hamısı">Ham&#305;s&#305;</button>
+<button class="partner-filter-btn" type="button" data-filter="Tikinti və Daşınmaz Əmlak">Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</button>
+<button class="partner-filter-btn" type="button" data-filter="Enerji və Sənaye">Enerji v&#601; S&#601;naye</button>
+<button class="partner-filter-btn" type="button" data-filter="Texnologiya və İnnovasiya">Texnologiya v&#601; &#304;nnovasiya</button>
+<button class="partner-filter-btn" type="button" data-filter="Maliyyə, Audit və Konsaltinq">Maliyy&#601;, Audit v&#601; Konsaltinq</button>
+<button class="partner-filter-btn" type="button" data-filter="Media və Marketinq">Media v&#601; Marketinq</button>
+<button class="partner-filter-btn" type="button" data-filter="Qida və Restoran">Qida v&#601; Restoran</button>
+<button class="partner-filter-btn" type="button" data-filter="Təhsil">T&#601;hsil</button>
+<button class="partner-filter-btn" type="button" data-filter="Logistika və Ekologiya">Logistika v&#601; Ekologiya</button>
+<button class="partner-filter-btn" type="button" data-filter="Turizm və Hotelçilik">Turizm v&#601; Hotel&#231;ilik</button>
+<button class="partner-filter-btn" type="button" data-filter="Ticarət və İstehsal">Ticar&#601;t v&#601; &#304;stehsal</button>
+<button class="partner-filter-btn" type="button" data-filter="Səhiyyə">S&#601;hiyy&#601;</button>
+<button class="partner-filter-btn" type="button" data-filter="İctimai Təşkilatlar">&#304;ctimai T&#601;&#351;kilatlar</button>
+      </div>
+      <div class="partners-count"><span id="partnersCount">70</span> partnyor g&#246;st&#601;rilir</div>
+      <div class="partners-grid" id="partnersGrid">
+        <article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-01-best-energy-group.jpg" alt="Best Energy Group"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Best Energy Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Logistika və Ekologiya">
+  <div class="partner-logo-box"><img src="partner-02-eco-logistics-waste-management.jpg" alt="ECO Logistics & Waste Management"></div>
+  <div class="partner-card-body">
+    <span>Logistika v&#601; Ekologiya</span>
+    <h3>ECO Logistics & Waste Management</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-03-senna-lift-ve-eskalator.jpg" alt="Senna Lift v&#601; Eskalator"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Senna Lift v&#601; Eskalator</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-04-sirab.jpg" alt="Sirab"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Sirab</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-05-as-motors-group.jpg" alt="AS Motors Group"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>AS Motors Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-06-deep-group.jpg" alt="Deep Group"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Deep Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Təhsil">
+  <div class="partner-logo-box"><img src="partner-07-mahal-academy.jpg" alt="Mahal Academy"></div>
+  <div class="partner-card-body">
+    <span>T&#601;hsil</span>
+    <h3>Mahal Academy</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-08-agah-group-of-construction-company.jpg" alt="A&#287;ah Group of Construction Company"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>A&#287;ah Group of Construction Company</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-09-bahar-home-concept.jpg" alt="Bahar Home Concept"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Bahar Home Concept</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-10-az-i-nsaat-holdinq.jpg" alt="AZ &#304;n&#351;aat Holdinq"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>AZ &#304;n&#351;aat Holdinq</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-11-xani-mmc.jpg" alt="XANI MMC"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>XANI MMC</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Texnologiya və İnnovasiya">
+  <div class="partner-logo-box"><img src="partner-12-atl-tech.png" alt="ATL Tech"></div>
+  <div class="partner-card-body">
+    <span>Texnologiya v&#601; &#304;nnovasiya</span>
+    <h3>ATL Tech</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-13-epcm.jpg" alt="EPCM"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>EPCM</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Texnologiya və İnnovasiya">
+  <div class="partner-logo-box"><img src="partner-14-mlk-tech-group.jpg" alt="MLK Tech Group"></div>
+  <div class="partner-card-body">
+    <span>Texnologiya v&#601; &#304;nnovasiya</span>
+    <h3>MLK Tech Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-15-mahmud-topcu.jpg" alt="Mahmud Top&#231;u"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>Mahmud Top&#231;u</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-16-sinkar-holding.jpg" alt="&#350;inkar Holding"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>&#350;inkar Holding</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-17-veliyev.jpg" alt="V&#601;liyev"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>V&#601;liyev</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-18-az-filter-company.jpg" alt="AZ Filter Company"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>AZ Filter Company</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-19-crea-time.jpg" alt="Crea Time"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>Crea Time</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-20-khan-grand-projects.png" alt="Khan Grand Projects"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Khan Grand Projects</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-21-business-bridge.jpg" alt="Business Bridge"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>Business Bridge</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-22-kripton-business-solutions.jpg" alt="Kripton Business Solutions"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>Kripton Business Solutions</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-23-digiboom.jpg" alt="DigiBoom"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>DigiBoom</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Texnologiya və İnnovasiya">
+  <div class="partner-logo-box"><img src="partner-24-talks.jpg" alt="Talks"></div>
+  <div class="partner-card-body">
+    <span>Texnologiya v&#601; &#304;nnovasiya</span>
+    <h3>Talks</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Logistika və Ekologiya">
+  <div class="partner-logo-box"><img src="partner-25-chark-mmc-global.jpg" alt="Chark MMC Global"></div>
+  <div class="partner-card-body">
+    <span>Logistika v&#601; Ekologiya</span>
+    <h3>Chark MMC Global</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-26-genc-media.jpg" alt="G&#601;nc Media"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>G&#601;nc Media</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="İctimai Təşkilatlar">
+  <div class="partner-logo-box"><img src="partner-27-azerbaycan-usaqlar-i-ctimai-birliyi.jpg" alt="Az&#601;rbaycan U&#351;aqlar &#304;ctimai Birliyi"></div>
+  <div class="partner-card-body">
+    <span>&#304;ctimai T&#601;&#351;kilatlar</span>
+    <h3>Az&#601;rbaycan U&#351;aqlar &#304;ctimai Birliyi</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-28-4p-advertising-agency.jpg" alt="4P Advertising Agency"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>4P Advertising Agency</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-29-bamagro.jpg" alt="Bamagro"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Bamagro</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-30-han-i-nsaat.jpg" alt="Han &#304;n&#351;aat"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Han &#304;n&#351;aat</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-31-guven-finans.jpg" alt="G&#252;v&#601;n Finans"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>G&#252;v&#601;n Finans</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-32-nero-print.jpg" alt="Nero Print"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>Nero Print</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-33-celiloglu.jpg" alt="C&#601;lilo&#287;lu"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>C&#601;lilo&#287;lu</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-34-chinar-park-business-centre.jpg" alt="Chinar Park Business Centre"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Chinar Park Business Centre</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Texnologiya və İnnovasiya">
+  <div class="partner-logo-box"><img src="partner-35-fraktal-technologies.jpg" alt="Fraktal Technologies"></div>
+  <div class="partner-card-body">
+    <span>Texnologiya v&#601; &#304;nnovasiya</span>
+    <h3>Fraktal Technologies</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-36-solar-azerbaijan.png" alt="Solar Azerbaijan"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Solar Azerbaijan</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-37-nextgen-consulting.jpg" alt="NextGen Consulting"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>NextGen Consulting</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Səhiyyə">
+  <div class="partner-logo-box"><img src="partner-38-medicare-klinika.jpg" alt="Medicare Klinika"></div>
+  <div class="partner-card-body">
+    <span>S&#601;hiyy&#601;</span>
+    <h3>Medicare Klinika</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-39-bmg-international.jpg" alt="BMG International"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>BMG International</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-40-bizcon-consulting-audit.jpg" alt="Bizcon Consulting & Audit"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>Bizcon Consulting & Audit</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Təhsil">
+  <div class="partner-logo-box"><img src="partner-41-aca-demy.jpg" alt="ACA-DEMY"></div>
+  <div class="partner-card-body">
+    <span>T&#601;hsil</span>
+    <h3>ACA-DEMY</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-42-turkel-media.jpg" alt="T&#252;rkel Media"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>T&#252;rkel Media</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-43-huseyn-2010.jpg" alt="H&#252;seyn 2010"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>H&#252;seyn 2010</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-44-khingalchi.jpg" alt="Khingalchi"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Khingalchi</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-45-ves-realty.jpg" alt="VES Realty"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>VES Realty</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-46-then-global-company.jpg" alt="Then Global Company"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Then Global Company</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-47-i-lqaroglu-group-mmc.jpg" alt="&#304;lqaro&#287;lu Group MMC"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>&#304;lqaro&#287;lu Group MMC</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Media və Marketinq">
+  <div class="partner-logo-box"><img src="partner-48-kookla-tv.jpg" alt="Kookla TV"></div>
+  <div class="partner-card-body">
+    <span>Media v&#601; Marketinq</span>
+    <h3>Kookla TV</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Turizm və Hotelçilik">
+  <div class="partner-logo-box"><img src="partner-49-new-baku-hotel.jpg" alt="New Baku Hotel"></div>
+  <div class="partner-card-body">
+    <span>Turizm v&#601; Hotel&#231;ilik</span>
+    <h3>New Baku Hotel</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-50-overmetal.jpg" alt="Overmetal"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Overmetal</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-51-kitchen-plus.png" alt="Kitchen Plus"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Kitchen Plus</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-52-natura-i-nsaat.jpg" alt="Natura &#304;n&#351;aat"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Natura &#304;n&#351;aat</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-53-innovative-construction-mmc.jpg" alt="Innovative Construction MMC"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Innovative Construction MMC</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Turizm və Hotelçilik">
+  <div class="partner-logo-box"><img src="partner-54-get-rent-a-car.jpg" alt="GET Rent A Car"></div>
+  <div class="partner-card-body">
+    <span>Turizm v&#601; Hotel&#231;ilik</span>
+    <h3>GET Rent A Car</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Maliyyə, Audit və Konsaltinq">
+  <div class="partner-logo-box"><img src="partner-55-dostcare-business-consulting.jpg" alt="DostCare Business Consulting"></div>
+  <div class="partner-card-body">
+    <span>Maliyy&#601;, Audit v&#601; Konsaltinq</span>
+    <h3>DostCare Business Consulting</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Turizm və Hotelçilik">
+  <div class="partner-logo-box"><img src="partner-56-af-travel-azerbaijan.png" alt="AF Travel Azerbaijan"></div>
+  <div class="partner-card-body">
+    <span>Turizm v&#601; Hotel&#231;ilik</span>
+    <h3>AF Travel Azerbaijan</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-57-khan-group.jpg" alt="Khan Group"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Khan Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-58-elved-group.jpg" alt="Elved Group"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Elved Group</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-59-bp-baku-power.jpg" alt="BP Baku Power"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>BP Baku Power</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-60-storm-engineering.jpg" alt="Storm Engineering"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Storm Engineering</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-61-absheron-saffron.jpg" alt="Absheron Saffron"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Absheron Saffron</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-62-aktiv-enerji.jpg" alt="Aktiv Enerji"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>Aktiv Enerji</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-63-west-construction.jpg" alt="West Construction"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>West Construction</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Təhsil">
+  <div class="partner-logo-box"><img src="partner-64-edu-distance.jpg" alt="Edu Distance"></div>
+  <div class="partner-card-body">
+    <span>T&#601;hsil</span>
+    <h3>Edu Distance</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-65-el-holding.jpg" alt="EL Holding"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>EL Holding</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-66-estet-company.jpg" alt="Estet Company"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Estet Company</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Tikinti və Daşınmaz Əmlak">
+  <div class="partner-logo-box"><img src="partner-67-makro-construction.jpg" alt="Makro Construction"></div>
+  <div class="partner-card-body">
+    <span>Tikinti v&#601; Da&#351;&#305;nmaz &#399;mlak</span>
+    <h3>Makro Construction</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Enerji və Sənaye">
+  <div class="partner-logo-box"><img src="partner-68-s-i-g-n.png" alt="S.I.G.N"></div>
+  <div class="partner-card-body">
+    <span>Enerji v&#601; S&#601;naye</span>
+    <h3>S.I.G.N</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Qida və Restoran">
+  <div class="partner-logo-box"><img src="partner-69-zevna.jpg" alt="Zevna"></div>
+  <div class="partner-card-body">
+    <span>Qida v&#601; Restoran</span>
+    <h3>Zevna</h3>
+  </div>
+</article>
+<article class="partner-card" data-category="Ticarət və İstehsal">
+  <div class="partner-logo-box"><img src="partner-70-aqat-silver.jpg" alt="Aqat Silver"></div>
+  <div class="partner-card-body">
+    <span>Ticar&#601;t v&#601; &#304;stehsal</span>
+    <h3>Aqat Silver</h3>
+  </div>
 </article>
       </div>
     </div>
   </section>
+  <script>
+    (function() {
+      var buttons = document.querySelectorAll('.partner-filter-btn');
+      var cards = document.querySelectorAll('.partner-card');
+      var count = document.getElementById('partnersCount');
+      buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var filter = btn.getAttribute('data-filter');
+          buttons.forEach(function(b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+          var visible = 0;
+          cards.forEach(function(card) {
+            var match = filter === 'Hamısı' || card.getAttribute('data-category') === filter;
+            card.style.display = match ? '' : 'none';
+            if (match) visible++;
+          });
+          if (count) count.textContent = visible;
+        });
+      });
+    })();
+  </script>
 </main>
 <footer class="footer">
 <div class="container">
