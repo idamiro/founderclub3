@@ -152,15 +152,19 @@ document.querySelectorAll(".faq-question").forEach((button) => {
   const tabs = section.querySelectorAll(".selector-tab");
   const panels = section.querySelectorAll(".selector-panel");
 
-  const clearPanel = (panel) => {
-    panel.querySelectorAll(".selector-card").forEach((card) => {
-      card.classList.remove("is-selected");
-      const btn = card.querySelector(".selector-btn");
-      if (btn) btn.textContent = "Paketi seç →";
+  const closeCard = (card) => {
+    if (!card) return;
+    card.classList.remove("is-selected");
 
-      const oldDetail = card.querySelector(".selector-card-detail");
-      if (oldDetail) oldDetail.remove();
-    });
+    const btn = card.querySelector(".selector-btn");
+    if (btn) btn.textContent = "Paketi seç →";
+
+    const detail = card.querySelector(".selector-card-detail");
+    if (detail) detail.remove();
+  };
+
+  const clearPanel = (panel) => {
+    panel.querySelectorAll(".selector-card").forEach(closeCard);
 
     // Old bottom detail box should not be used anymore.
     const detail = panel.querySelector(".selector-detail");
@@ -192,26 +196,44 @@ document.querySelectorAll(".faq-question").forEach((button) => {
         <p>${subtitle}</p>
       </div>
       <ul class="selector-detail-list">${items}</ul>
+      <button type="button" class="selector-close-btn">Kapat ↑</button>
     `;
+
+    detail.querySelector(".selector-close-btn")?.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      closeCard(card);
+    });
+
     return detail;
   };
 
-  const selectCard = (card) => {
+  const openCard = (card) => {
     const panel = card.closest(".selector-panel");
     if (!panel) return;
 
+    // Important: close all cards in the active panel first.
     panel.querySelectorAll(".selector-card").forEach((c) => {
-      const isSelected = c === card;
-      c.classList.toggle("is-selected", isSelected);
-
-      const btn = c.querySelector(".selector-btn");
-      if (btn) btn.textContent = isSelected ? "Seçildi ✓" : "Paketi seç →";
-
-      const oldDetail = c.querySelector(".selector-card-detail");
-      if (oldDetail) oldDetail.remove();
+      if (c !== card) closeCard(c);
     });
 
+    card.classList.add("is-selected");
+
+    const btn = card.querySelector(".selector-btn");
+    if (btn) btn.textContent = "Kapat ↑";
+
+    const oldDetail = card.querySelector(".selector-card-detail");
+    if (oldDetail) oldDetail.remove();
+
     card.appendChild(buildDetail(card));
+  };
+
+  const toggleCard = (card) => {
+    if (card.classList.contains("is-selected")) {
+      closeCard(card);
+    } else {
+      openCard(card);
+    }
   };
 
   tabs.forEach((tab) => {
@@ -230,7 +252,11 @@ document.querySelectorAll(".faq-question").forEach((button) => {
   section.querySelectorAll(".selector-card").forEach((card) => {
     card.addEventListener("click", (event) => {
       event.preventDefault();
-      selectCard(card);
+
+      // If the click came from the generated close button, its own handler handles it.
+      if (event.target.closest(".selector-close-btn")) return;
+
+      toggleCard(card);
     });
   });
 

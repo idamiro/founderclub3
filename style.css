@@ -2892,7 +2892,10 @@ img{
 @media(max-width:560px){.partners-grid{grid-template-columns:1fr;}.partners-section{padding:44px 0 76px;}.partner-card{min-height:220px;}}
 
 
-/* MEMBERSHIP SELECTOR: details open inside selected card */
+
+
+
+/* MEMBERSHIP SELECTOR: details open only inside selected card */
 .membership-selector .selector-detail{
   display:none !important;
 }
@@ -2901,16 +2904,17 @@ img{
   position:relative;
 }
 
-.selector-card-detail{
+.selector-card .selector-card-detail{
+  display:none;
+}
+
+.selector-card.is-selected .selector-card-detail{
+  display:block;
   width:100%;
   margin-top:18px;
   padding-top:18px;
   border-top:1px solid rgba(9,17,31,.12);
   animation:selectorCardDetailOpen .26s cubic-bezier(.22,1,.36,1);
-}
-
-.selector-card.is-selected .selector-card-detail{
-  display:block;
 }
 
 .selector-card-detail-head h4{
@@ -2942,6 +2946,27 @@ img{
 .selector-card-detail .selector-detail-list li{
   color:var(--muted);
   line-height:1.55;
+}
+
+.selector-close-btn{
+  margin-top:18px;
+  border:0;
+  border-radius:999px;
+  padding:12px 18px;
+  background:linear-gradient(135deg,var(--copper),var(--copper2));
+  color:#211306;
+  font-weight:950;
+  cursor:pointer;
+  transition:.22s ease;
+}
+
+.selector-close-btn:hover{
+  transform:translateY(-2px);
+}
+
+.selector-card.is-selected .selector-btn{
+  background:linear-gradient(135deg,var(--copper),var(--copper2)) !important;
+  color:#211306 !important;
 }
 
 @keyframes selectorCardDetailOpen{
