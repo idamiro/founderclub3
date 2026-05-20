@@ -157,19 +157,21 @@ document.querySelectorAll(".faq-question").forEach((button) => {
       card.classList.remove("is-selected");
       const btn = card.querySelector(".selector-btn");
       if (btn) btn.textContent = "Paketi seç →";
+
+      const oldDetail = card.querySelector(".selector-card-detail");
+      if (oldDetail) oldDetail.remove();
     });
 
+    // Old bottom detail box should not be used anymore.
     const detail = panel.querySelector(".selector-detail");
     if (detail) {
       detail.classList.remove("is-visible");
       detail.innerHTML = "";
+      detail.style.display = "none";
     }
   };
 
-  const renderDetail = (panel, card) => {
-    const detail = panel.querySelector(".selector-detail");
-    if (!detail || !card) return;
-
+  const buildDetail = (card) => {
     const name = card.dataset.planName || "";
     const tag = card.dataset.planTag || "";
     const price = card.dataset.planPrice || "";
@@ -180,18 +182,18 @@ document.querySelectorAll(".faq-question").forEach((button) => {
       .map((item) => `<li>${item}</li>`)
       .join("");
 
+    const detail = document.createElement("div");
+    detail.className = "selector-card-detail";
     detail.innerHTML = `
-      <div class="selector-detail-head">
-        <div>
-          <span class="selector-detail-kicker">${tag}</span>
-          <h3>${name}</h3>
-          <p>${subtitle}</p>
-        </div>
-        <div class="selector-detail-price">${price}</div>
+      <div class="selector-card-detail-head">
+        <span class="selector-detail-kicker">${tag}</span>
+        <h4>${name}</h4>
+        <strong>${price}</strong>
+        <p>${subtitle}</p>
       </div>
       <ul class="selector-detail-list">${items}</ul>
     `;
-    detail.classList.add("is-visible");
+    return detail;
   };
 
   const selectCard = (card) => {
@@ -199,12 +201,17 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     if (!panel) return;
 
     panel.querySelectorAll(".selector-card").forEach((c) => {
-      c.classList.toggle("is-selected", c === card);
+      const isSelected = c === card;
+      c.classList.toggle("is-selected", isSelected);
+
       const btn = c.querySelector(".selector-btn");
-      if (btn) btn.textContent = c === card ? "Seçildi ✓" : "Paketi seç →";
+      if (btn) btn.textContent = isSelected ? "Seçildi ✓" : "Paketi seç →";
+
+      const oldDetail = c.querySelector(".selector-card-detail");
+      if (oldDetail) oldDetail.remove();
     });
 
-    renderDetail(panel, card);
+    card.appendChild(buildDetail(card));
   };
 
   tabs.forEach((tab) => {
