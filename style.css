@@ -3114,3 +3114,11 @@ img{
     border-radius:26px;
   }
 }
+
+
+/* Single-page advisory testimonials fix */
+.all-advisory-page .all-advisory-wrap{overflow:visible;}
+.all-advisory-page .all-advisory-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;overflow:visible!important;scroll-behavior:auto!important;}
+.all-advisory-page .testimonial{min-width:0!important;width:auto!important;height:auto;}
+.all-advisory-page .testimonial p{display:block;}
+.all-testimonials-btn{white-space:nowrap;}
