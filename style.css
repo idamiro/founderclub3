@@ -3114,13 +3114,3 @@ img{
     border-radius:26px;
   }
 }
-
-
-/* SINGLE TESTIMONIALS PAGE FIX */
-.fc-testimonial-card.is-extra{display:none;}
-.fc-testimonials-section.show-all .fc-testimonial-card.is-extra{display:none;}
-.fc-show-all-testimonials{display:inline-flex;}
-.all-testimonials-page .fc-testimonial-card,
-.all-testimonials-page .fc-testimonial-card.is-extra{
-  display:flex;
-}

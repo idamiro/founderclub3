@@ -272,3 +272,16 @@ document.querySelectorAll(".faq-question").forEach((button) => {
 })();
 
 
+// Home testimonials: show all
+(() => {
+  const section = document.querySelector(".fc-testimonials-section");
+  const btn = document.querySelector(".fc-show-all-testimonials");
+  if (!section || !btn || btn.dataset.boundTestimonials === "true") return;
+  btn.dataset.boundTestimonials = "true";
+
+  btn.addEventListener("click", () => {
+    const open = !section.classList.contains("show-all");
+    section.classList.toggle("show-all", open);
+    btn.textContent = open ? "Daha Az Göstər ↑" : "Hamısını Göstər ↗";
+  });
+})();
