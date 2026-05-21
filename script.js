@@ -143,111 +143,68 @@ document.querySelectorAll(".faq-question").forEach((button) => {
 
 
 
-// Membership selector: premium in-card details, only one card open.
+// Membership selector: user must manually select a plan
 (() => {
   const section = document.querySelector(".membership-selector");
-  if (!section || section.dataset.selectorPremiumReady === "true") return;
-  section.dataset.selectorPremiumReady = "true";
+  if (!section || section.dataset.selectorManualReady === "true") return;
+  section.dataset.selectorManualReady = "true";
 
   const tabs = section.querySelectorAll(".selector-tab");
   const panels = section.querySelectorAll(".selector-panel");
 
-  const closeCard = (card) => {
-    if (!card) return;
+  const clearPanel = (panel) => {
+    panel.querySelectorAll(".selector-card").forEach((card) => {
+      card.classList.remove("is-selected");
+      const btn = card.querySelector(".selector-btn");
+      if (btn) btn.textContent = "Paketi seç →";
+    });
 
-    card.classList.remove("is-selected");
-
-    const btn = card.querySelector(".selector-btn");
-    if (btn) btn.textContent = "Paketi seç";
-
-    const detail = card.querySelector(".selector-card-detail");
-    if (detail) detail.remove();
-  };
-
-  const closePanelCards = (panel) => {
-    panel.querySelectorAll(".selector-card").forEach(closeCard);
-
-    // Old bottom detail box is disabled permanently.
-    const bottomDetail = panel.querySelector(".selector-detail");
-    if (bottomDetail) {
-      bottomDetail.classList.remove("is-visible");
-      bottomDetail.innerHTML = "";
-      bottomDetail.style.display = "none";
+    const detail = panel.querySelector(".selector-detail");
+    if (detail) {
+      detail.classList.remove("is-visible");
+      detail.innerHTML = "";
     }
   };
 
-  const buildDetail = (card) => {
+  const renderDetail = (panel, card) => {
+    const detail = panel.querySelector(".selector-detail");
+    if (!detail || !card) return;
+
     const name = card.dataset.planName || "";
+    const tag = card.dataset.planTag || "";
     const price = card.dataset.planPrice || "";
     const subtitle = card.dataset.planSubtitle || "";
-    const rawItems = (card.dataset.planDetails || "").split("|").filter(Boolean);
-
-    const highlightedItems = rawItems.slice(0, 4);
-    const restItems = rawItems.slice(4);
-
-    const highlights = highlightedItems
+    const items = (card.dataset.planDetails || "")
+      .split("|")
+      .filter(Boolean)
       .map((item) => `<li>${item}</li>`)
       .join("");
 
-    const rest = restItems.length
-      ? `<div class="selector-extra-list">
-          ${restItems.map((item) => `<span>${item}</span>`).join("")}
-        </div>`
-      : "";
-
-    const detail = document.createElement("div");
-    detail.className = "selector-card-detail";
     detail.innerHTML = `
-      <div class="selector-card-detail-top">
+      <div class="selector-detail-head">
         <div>
-          <span class="selector-card-badge">Seçilmiş paket</span>
-          <h4>${name}</h4>
+          <span class="selector-detail-kicker">${tag}</span>
+          <h3>${name}</h3>
           <p>${subtitle}</p>
         </div>
-        <strong>${price}</strong>
+        <div class="selector-detail-price">${price}</div>
       </div>
-
-      <div class="selector-premium-note">
-        <b>Niyə bu paket?</b>
-        <span>Bu paket şirkətinizin Founder Club ekosistemində daha görünən, daha güclü və daha prestijli təmsil olunması üçün hazırlanıb.</span>
-      </div>
-
-      <ul class="selector-highlight-list">${highlights}</ul>
-      ${rest}
-
-      <button type="button" class="selector-close-btn">Bağla</button>
+      <ul class="selector-detail-list">${items}</ul>
     `;
-
-    detail.querySelector(".selector-close-btn")?.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      closeCard(card);
-    });
-
-    return detail;
+    detail.classList.add("is-visible");
   };
 
-  const openCard = (card) => {
+  const selectCard = (card) => {
     const panel = card.closest(".selector-panel");
     if (!panel) return;
 
-    // Close every card in every panel to prevent multiple long cards opening.
-    panels.forEach(closePanelCards);
+    panel.querySelectorAll(".selector-card").forEach((c) => {
+      c.classList.toggle("is-selected", c === card);
+      const btn = c.querySelector(".selector-btn");
+      if (btn) btn.textContent = c === card ? "Seçildi ✓" : "Paketi seç →";
+    });
 
-    card.classList.add("is-selected");
-
-    const btn = card.querySelector(".selector-btn");
-    if (btn) btn.textContent = "Bağla";
-
-    card.appendChild(buildDetail(card));
-  };
-
-  const toggleCard = (card) => {
-    if (card.classList.contains("is-selected")) {
-      closeCard(card);
-    } else {
-      openCard(card);
-    }
+    renderDetail(panel, card);
   };
 
   tabs.forEach((tab) => {
@@ -256,30 +213,22 @@ document.querySelectorAll(".faq-question").forEach((button) => {
 
       tabs.forEach((t) => t.classList.toggle("active", t === tab));
       panels.forEach((panel) => {
-        const active = panel.dataset.selectorPanel === key;
-        panel.classList.toggle("active", active);
-        closePanelCards(panel);
+        const isActive = panel.dataset.selectorPanel === key;
+        panel.classList.toggle("active", isActive);
+        clearPanel(panel);
       });
     });
   });
 
   section.querySelectorAll(".selector-card").forEach((card) => {
-    const btn = card.querySelector(".selector-btn");
-
-    // Only the button opens the detail. This prevents accidental card-wide opening.
-    btn?.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      toggleCard(card);
-    });
-
     card.addEventListener("click", (event) => {
-      if (event.target.closest(".selector-card-detail")) return;
-      if (event.target.closest(".selector-btn")) return;
+      event.preventDefault();
+      selectCard(card);
     });
   });
 
-  panels.forEach(closePanelCards);
+  // Important: no automatic default selection.
+  panels.forEach(clearPanel);
 })();
 
 
@@ -321,3 +270,5 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     node.parentNode.replaceChild(a, node);
   });
 })();
+
+
